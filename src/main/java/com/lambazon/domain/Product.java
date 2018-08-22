@@ -9,13 +9,23 @@ public class Product {
 
 	public Product(int id, int quantity, double price, String name, String description) {
 		setId(id);
-		/** "quantity" cannot be negative
-		 */
-		if (quantity < 0){
-			quantity = 0;
-		}
-		setQuantity(quantity);
-		setPrice(price);
+
+        /** "quantity" cannot be negative
+         */
+        if (quantity < 0){
+            quantity = 0;
+        }
+        setQuantity(quantity);
+
+        /** "price" cannot be negative and stand at 1000 if it is superior to 1000
+         */
+        if (price < 0){
+            price = 0;
+        }
+        if (price > 1000){
+            price = 1000;
+        }
+        setPrice(price);
 		setName(name);
 		setDescription(description);
 	}
