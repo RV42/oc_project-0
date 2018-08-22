@@ -27,7 +27,7 @@ public class Product {
 		return name;
 	}
 
-	public void setName(String name) {
+	private void setName(String name) {
 		this.name = name;
 	}
 
@@ -35,7 +35,7 @@ public class Product {
 		return description;
 	}
 
-	public void setDescription(String description) {
+	private void setDescription(String description) {
 		this.description = description;
 	}
 
@@ -47,24 +47,32 @@ public class Product {
 		this.details = details;
 	}
 
-	public int getQuantity() {
+	int getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(int quantity) {
+	private void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 
-	public double getPrice() {
+	double getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	private void setPrice(double price) {
 		this.price = price;
 	}
 
+
 	public double getInventoryPrice() {
-		// TODO Auto-generated method stub
-		return 0.0;
+
+		/** "InventoryPrice" is the multiplication "quantity" by "price" for each item
+		 The result "InventoryPrice" must be considered as a decimal number so I use "double"
+		 */
+
+	double InventoryPrice;
+		InventoryPrice = quantity * price;
+
+		return InventoryPrice;
 	}
 }
