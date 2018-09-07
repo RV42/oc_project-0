@@ -64,18 +64,25 @@ public class Product {
     }
 
     private void setPrice(double price)
+            // Set the product price
     {
         if( price >= 0 && price <= 1000)
+        // Case as price is between (included as well) 0 and 1000
         {
             this.price = price;
+            // The initial price is kept if condition is true
         }
         else if( price < 0)
+        // Case as price is strictly negative below 0
         {
             price = 0;
+            // The price equals 0 if condition is true
         }
         else if( price > 1000)
+        // Case as price is strictly over 1000
         {
             price = 1000;
+            // The price equals 1000 if condition is true
         }
 
         this.price = price;
