@@ -32,8 +32,6 @@ public class ProductController {
 	
 	private double calculateTotalInventoryAmount() {
 
-		/** "totalInventoryAmount" is obtained by addition of "InventoryPrice" of each product
-		 */
 
 		double totalInventoryAmount = 0;
 		for (Product p : productService.products()) {

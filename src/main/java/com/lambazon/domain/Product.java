@@ -10,15 +10,11 @@ public class Product {
 	public Product(int id, int quantity, double price, String name, String description) {
 		setId(id);
 
-        /** "quantity" cannot be negative
-         */
         if (quantity < 0){
             quantity = 0;
         }
         setQuantity(quantity);
 
-        /** "price" cannot be negative and stand at 1000 if it is superior to 1000
-         */
         if (price < 0){
             price = 0;
         }
@@ -81,9 +77,6 @@ public class Product {
 
 	public double getInventoryPrice() {
 
-		/** "InventoryPrice" is the multiplication "quantity" by "price" for each item
-		 *The result "InventoryPrice" must be considered as a decimal number so I use "double"
-		 */
 
 	double InventoryPrice;
 		InventoryPrice = quantity * price;
