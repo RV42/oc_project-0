@@ -84,10 +84,10 @@ public class Product {
 	public double getInventoryPrice() {
 
 
-	double InventoryPrice;
-	// Create the variable inventoryPrice in decimal number
-		InventoryPrice = quantity * price;
+	double inventoryPrice;
+	// Create the variable inventoryPrice in decimal number of a product
+		inventoryPrice = quantity * price;
     // It gives the total price by product type making the multiplication = number of products by standard price
-		return InventoryPrice;
+		return inventoryPrice;
 	}
 }
