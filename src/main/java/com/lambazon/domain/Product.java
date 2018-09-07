@@ -11,15 +11,21 @@ public class Product {
 		setId(id);
 
         if (quantity < 0){
+           // Condition for negative quantity
             quantity = 0;
+            // Set quantity at 0 when condition is true that means negative quantity entered
         }
         setQuantity(quantity);
 
         if (price < 0){
-            price = 0;
+			// Condition for negative price
+        	price = 0;
+			// Set price at 0 when condition is true that means negative price entered
         }
         if (price > 1000){
+			// Condition for price strictly above 1000
             price = 1000;
+            // set price at 1000 when condition is true that means price strictly entered above 1000
         }
         setPrice(price);
 		setName(name);
@@ -79,8 +85,9 @@ public class Product {
 
 
 	double InventoryPrice;
+	// Create the variable inventoryPrice in decimal number
 		InventoryPrice = quantity * price;
-
+    // It gives the total price by product type making the multiplication = number of products by standard price
 		return InventoryPrice;
 	}
 }

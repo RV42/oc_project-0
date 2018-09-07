@@ -31,13 +31,13 @@ public class ProductController {
 	}
 	
 	private double calculateTotalInventoryAmount() {
-
+        // Set the calculation
 
 		double totalInventoryAmount = 0;
 		for (Product p : productService.products()) {
 			totalInventoryAmount+=p.getInventoryPrice();
 		}
-		
+		// Give the total amount by addition of inventoryPrice of each product
 		return totalInventoryAmount;
 		
 		
