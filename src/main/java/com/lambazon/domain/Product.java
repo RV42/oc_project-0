@@ -9,24 +9,7 @@ public class Product {
 
 	public Product(int id, int quantity, double price, String name, String description) {
 		setId(id);
-
-        if (quantity < 0){
-           // Condition for negative quantity
-            quantity = 0;
-            // Set quantity at 0 when condition is true that means negative quantity entered
-        }
-        setQuantity(quantity);
-
-        if (price < 0){
-			// Condition for negative price
-        	price = 0;
-			// Set price at 0 when condition is true that means negative price entered
-        }
-        if (price > 1000){
-			// Condition for price strictly above 1000
-            price = 1000;
-            // set price at 1000 when condition is true that means price strictly entered above 1000
-        }
+		setQuantity(quantity);
         setPrice(price);
 		setName(name);
 		setDescription(description);
@@ -69,7 +52,11 @@ public class Product {
 	}
 
 	private void setQuantity(int quantity) {
-		this.quantity = quantity;
+		if (quantity < 0)
+            // Condition for negative quantity
+    quantity = 0;
+        // Set quantity at 0 when condition is true that means negative quantity entered
+	    this.quantity = quantity;
 	}
 
 	public double getPrice() {
@@ -77,7 +64,18 @@ public class Product {
 	}
 
 	private void setPrice(double price) {
-		this.price = price;
+        if (price < 0){
+            // Condition for negative price
+            price = 0;
+            // Set price at 0 when condition is true that means negative price entered
+        }
+        if (price > 1000){
+            // Condition for price strictly above 1000
+            price = 1000;
+            // set price at 1000 when condition is true that means price strictly entered above 1000
+        }
+
+	    this.price = price;
 	}
 
 
